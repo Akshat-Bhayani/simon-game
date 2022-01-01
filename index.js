@@ -13,7 +13,7 @@ $(".btn").click(function(){
   animatePress(userChosenColour);
   checkAnswer(userClickedPattern.length-1);
 })
-$(document).keydown(function(){
+$(".start").click(function(){
   if(!started)
   {
     nextSequence();
@@ -69,7 +69,7 @@ function checkAnswer(currentLevel)
         $("body").removeClass("game-over");
       }, 200);
 
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Press the start Key to Restart");
       restartGame();
   }
 }
